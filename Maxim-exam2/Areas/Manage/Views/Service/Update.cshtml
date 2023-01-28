@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+@model UpdateServiceVM
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Service Update</h4>
+            <p class="card-description">
+                
+            </p>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" type="text" class="form-control" placeholder="Name">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <input asp-for="Description" type="text" class="form-control" placeholder="Name">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Image">Image</label>
+                    <input asp-for="Image" class="form-control" placeholder="Name">
+                    <span asp-validation-for="Image"></span>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                @*<button asp-area="Manage" asp-controller="Service" asp-action="Index" class="btn btn-">Cancel</button>*@
+            </form>
+        </div>
+    </div>
+</div>
+
